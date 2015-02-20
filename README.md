@@ -8,14 +8,16 @@ resources: 2
 
 ## Contents
 
-This readme is organized into six sections:
+This readme is organized into eight sections:
 
 1. Guidelines
 2. Requirements
 3. Inspiration
 4. Instructions
-5. Bonus
-6. Resources
+5. Adding Gems
+6. Testing out Your Code
+7. Bonus
+8. Resources
 
 ## Guidelines
 
@@ -161,6 +163,16 @@ Here are some popular websites you can scrape
 ## Adding Gems
 
 This lab manages gems using [Bundler](http://bundler.io/). This means that instead of writing "require `name-of-gem'` at the top of your files, you're going to add that gem to the Gemfile, for instance `gem "nokogiri"`, then run `bundle install` again. The file `config/environment.rb` requires all these gems, then loads your modules, then your models, then your scrapers/API callers, then your CLI runner. Then it requires the "json" and "open-uri" modules.
+
+## Testing Your Code
+
+To see what your code is like, run `rake console` from your terminal. To see why this works, take a look at the Rakefile. It loads the following items in order:
+
+1. gems
+2. modules
+3. models
+4. data fetchers
+5. cli
 
 ## Bonus
 
